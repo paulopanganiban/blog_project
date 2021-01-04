@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogster</title>
+    <link rel="stylesheet" href="{% static 'bulma.min.css' %}" />
+  </head>
+  <body class="base">
+    <!-- navbar -->
+    {% include '_navbar.html' %}
+    <!-- container -->
+    <div class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8">
+            {% block content %}{% endblock content %}
+          </div>
+          <div class="column is-4">
+            <aside class="menu">
+              <p class="menu-label is-italic">
+                You can put any information here
+              </p>
+              <ul class="menu-list">
+                <li><a>Latest Post</a></li>
+                <li><a>Announcement</a></li>
+                <li><a>Calendars</a></li>
+                <li><a>etc</a></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </body>
+</html>
