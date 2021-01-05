@@ -1,0 +1,33 @@
+{% extends '_base.html' %} {% block content %}
+<!-- pip install django-crispy-forms -->
+<!-- action is where to send the DATA -->
+<!-- method  -->
+<div class="container">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="field">
+        <label class="label">TO FIX THE FUCKING FORM</label>
+        {{FORMvariableTHIS.as_p}}
+        <hr>
+      <label class="label">Username</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" type="text" placeholder="Enter your username" />
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+        <!-- <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span> -->
+      </div>
+      <!-- <p class="help is-success">This username is available</p> -->
+    </div>
+    <label class="label">Password</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input" type="text" placeholder="Enter a unique password" />
+      <span class="icon is-small is-left">
+        <i class="fas fa-key"></i>
+      </span>
+    </div>
+  </form>
+</div>
+{% endblock content %}
